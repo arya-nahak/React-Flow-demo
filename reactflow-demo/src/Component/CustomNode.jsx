@@ -1,10 +1,12 @@
 import { useCallback } from "react";
 import { Handle, Position } from "reactflow";
+import DemoTr from "./DemoTr";
 
 const handleStyle = { left: 10 };
 
-function CustomNode({ data, isConnectable }) {
-  console.log(data,"....")
+function CustomNode({ data, isConnectable, id }) {
+  console.log(data, "....");
+
   const onChange = useCallback((evt) => {
     console.log(evt.target.value);
   }, []);
@@ -15,16 +17,16 @@ function CustomNode({ data, isConnectable }) {
         type="target"
         position={Position.Top}
         isConnectable={isConnectable}
-        id='a'
+        id="a"
       />
-        <Handle
+      <Handle
         type="target"
         position={Position.Top}
         isConnectable={isConnectable}
-        id='b'
+        id="b"
       />
       <div>
-        <div
+        {/* <div
           style={{
             border: "2px solid black",
             width: "150px",
@@ -32,7 +34,14 @@ function CustomNode({ data, isConnectable }) {
             borderRadius: "5px",
           }}
         >
-          <div className="" style={{ display: "flex", alignItems: "center" ,backgroundColor:data.backgroundColor}}>
+          <div
+            className=""
+            style={{
+              display: "flex",
+              alignItems: "center",
+              backgroundColor: data.backgroundColor,
+            }}
+          >
             <img
               src="fjhgdfhgkdf"
               height="30px"
@@ -40,9 +49,10 @@ function CustomNode({ data, isConnectable }) {
               alt="img"
               style={{ borderRadius: "50%", backgroundColor: "white" }}
             ></img>
-            <p onClick={()=>alert(data.value)}>{data.value}</p>
+            <p onClick={() => alert(data.value)}>{data.value}</p>
           </div>
-        </div>
+        </div> */}
+        <DemoTr id={id} data={data} />
       </div>
       <Handle
         type="source"

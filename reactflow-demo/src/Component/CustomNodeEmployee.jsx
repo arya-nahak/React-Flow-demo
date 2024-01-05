@@ -10,10 +10,7 @@ function CustomNodeEmployee({ data, isConnectable }) {
 
   return (
     <div className="text-updater-node">
-      <Handle
-        type="target"
-        position={Position.Top}
-      />
+      <Handle type="target" position={Position.Top} />
       <div>
         <div
           style={{
@@ -25,10 +22,6 @@ function CustomNodeEmployee({ data, isConnectable }) {
         >
           <div className="" style={{ display: "flex", alignItems: "center" }}>
             <h5>Description</h5>
-            <div>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe,
-              accusantium!
-            </div>
           </div>
         </div>
       </div>
